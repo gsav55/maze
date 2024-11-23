@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "maze"
+version = "0.1.0"
+description = ""
+authors = ["gsav55 <graysav@gmail.com>"]
+readme = "README.md"
+packages = [{include = "maze", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pygame = "^2.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
