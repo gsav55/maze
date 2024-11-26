@@ -6,7 +6,25 @@ clock = pygame.time.Clock()
 running = True
 dt = 0
 
-player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
+# 1280/100 = 12.8
+# 729/100 = 7.2
+# 12 x 7 grid of 100x100 boxes to make map
+#
+grid = [
+    [1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,1,0,0,0,1,0,0,0,0,1],
+    [1,0,1,0,1,0,0,0,1,0,0,1],
+    [1,0,1,0,1,1,1,0,1,0,0,1],
+    [1,0,0,0,1,0,1,0,1,0,0,1],
+    [1,0,1,0,0,0,1,0,0,0,0,0],
+    [1,1,1,1,1,1,1,1,1,1,1,1],
+]
+
+# player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
+player_pos = pygame.Vector2(2,1)
+
+for row in grid:
+    for 
 
 while running:
     # poll for events
