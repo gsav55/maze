@@ -1,5 +1,6 @@
 import pygame
 from pathlib import Path
+from dataclasses import dataclass
 
 pygame.init()
 screen = pygame.display.set_mode((1280, 720))
@@ -7,10 +8,34 @@ clock = pygame.time.Clock()
 running = True
 dt = 0
 
-WALL = 0x000000
-FLOOR = 0xFFFFFF
-GOAL = 0xFF55FF
-START = 0x55FFFF
+
+@dataclass
+class Wall:
+    hex = 0x000000
+    rgb = (0, 0, 0)
+    color = pygame.Color(0, 0, 0)
+
+
+@dataclass
+class Floor:
+    hex = 0xFFFFFF
+    rgb = (255, 255, 255)
+    color = pygame.Color(255, 255, 255)
+
+
+@dataclass
+class Goal:
+    hex = 0xFF55FF
+    rgb = (255, 85, 255)
+    color = pygame.Color(255, 85, 255)
+
+
+@dataclass
+class Start:
+    hex = 0x55FFFF
+    rgb = (85, 255, 255)
+    color = pygame.Color(85, 255, 255)
+
 
 MOVE_PIXELS = 40
 
